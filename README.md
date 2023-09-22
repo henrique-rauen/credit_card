@@ -112,6 +112,8 @@ In a way our model informs what the client can do and the client informs us what
 <br>
 <br>
 Here we can compare our base model with a random forest based on exactly the same features, the same ones our preliminary analysis suggested were the most important. It's overall better, but it lost a lot of the recall. Interesting. Let's run the same model but with all available features...
+<br>
+<br>
 ![Distribution](assets/rf1.png "A random forest with the same features")
 <br>
 <br>
