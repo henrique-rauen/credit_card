@@ -59,7 +59,7 @@ But of course, the best way to look at data is to make usage of graphics. But wh
 In our dataset we have almost 20 features, but here is just a sample. Let's see the same graphs for the churners.
 <br>
 <br>
-![Distribution](assets/full_graphs.png "The distribution of some of our features for churned customers")
+![Distribution](assets/churned_graphs.png "The distribution of some of our features for churned customers")
 <br>
 <br>
 We can already see some differences, `Total_Transaction_Ct` for example seems to skewed to less transactions for the churners. Makes sense, people who use their cards less are more likely to move on. But looking at plots one by one is hard, we need a better way to compare, what about if we put them side by side?
@@ -68,7 +68,7 @@ We can already see some differences, `Total_Transaction_Ct` for example seems to
 ![Distribution](assets/side_side.png "Side by Side comparison")
 <br>
 <br>
-That's definitely better, but the graphs are not on the same scale. Sure, we can still find differences and get insights from those, but it's not so easily visible and requires a little bit of experience. Despite all that, some of the previous insights have become clearer, `Total_Trans_Ct` clearly has a different shape for customers who churned for example. But we can still do better visualizing, let's try to improve even more.
+That's definitely better, but the graphs are not on the same scale. Sure, we can still find differences and get insights from those, but it's not so easily visible and requires a little bit of experience. Despite all that, some of the previous insights have become clearer, `Total_Relationship_Ct` clearly has a different shape for customers who churned for example. But we can still do better visualizing, let's try to improve even more.
 <br>
 <br>
 ![Distribution](assets/as_one.png "Both Graphs as one")
@@ -108,13 +108,11 @@ Not great obviously, but actually not bad. Precision is terrible, which means we
 But imagine they want to give $100 voucher for everyone who is likely to churn, then suddenly casting a wide net like our model does is quite bad, it would cost the bank way more just because our model does not have good precision!
 <br>
 <br>
-In a way our model informs what the client can do and client informs us what kind of model we should strive for. But this is just our base model, we will try to improve it anyway, but for the sake of this exercise, we are gonna assume that recall is more important (aka, casting a wide net is ok, just not such a big net as this basic simple model).
-<br>
-<br>
-![Distribution](assets/rf1.png "A random forest with the same features")
+In a way our model informs what the client can do and the client informs us what kind of model we should strive for. But this is just our base model, we will try to improve it anyway, but for the sake of this exercise, we are gonna assume that recall is more important (aka, casting a wide net is ok, just not such a big net as this basic simple model).
 <br>
 <br>
 Here we can compare our base model with a random forest based on exactly the same features, the same ones our preliminary analysis suggested were the most important. It's overall better, but it lost a lot of the recall. Interesting. Let's run the same model but with all available features...
+![Distribution](assets/rf1.png "A random forest with the same features")
 <br>
 <br>
 ![Distribution](assets/rf2.png "A random forest with the all features")
